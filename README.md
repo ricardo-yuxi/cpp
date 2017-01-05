@@ -10,8 +10,8 @@ Building a C++ program is a three-step process.
 
 #### Run in Mac OSX
 
-`g++ name.cpp`
-`./a.out`
+* `g++ name.cpp`
+* `./a.out`
 
 The iostream header declares the input and output mechanisms provided by C++.
 
@@ -45,9 +45,9 @@ The table that follows shows the most common variable types used in C++.
 
 Variables can be converted to other types by casting them. For example, an int can be cast to a bool. C++ provides three ways of explicitly changing the type of a variable. The first method is a holdover from C, but is still the most commonly used. The second method seems more natural at first but is rarely seen. The third method is the most verbose, but often considered the cleanest.
 
-`bool someBool = (bool)someInt; // method 1`
-`bool someBool = bool(someInt); // method 2`
-`bool someBool = static_cast<bool>(someInt); // method 3`
+* `bool someBool = (bool)someInt; // method 1`
+* `bool someBool = bool(someInt); // method 2`
+* `bool someBool = static_cast<bool>(someInt); // method 3`
 
 
 #### Operators
