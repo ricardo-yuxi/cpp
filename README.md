@@ -43,3 +43,10 @@ Variables can be converted to other types by casting them. For example, an int c
 `bool someBool = (bool)someInt; // method 1`
 `bool someBool = bool(someInt); // method 2`
 `bool someBool = static_cast<bool>(someInt); // method 3`
+
+
+#### Operators
+
+The table below shows the most common operators used in C++ and sample code that makes use of them.
+
+<img src="images/operators" alt="">
