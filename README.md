@@ -1,4 +1,4 @@
-### C++ Research
+## C++ Research
 
 #### Preprocessor Directives
 
@@ -7,6 +7,11 @@ Building a C++ program is a three-step process.
 * The code is run through a preprocessor
 * The code is compiled
 * The individual object files are linked together into a single application
+
+#### Run in Mac OSX
+
+`g++ name.cpp`
+`./a.out`
 
 The iostream header declares the input and output mechanisms provided by C++.
 
