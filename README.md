@@ -13,3 +13,20 @@ The iostream header declares the input and output mechanisms provided by C++.
 The table below shows some of the most common preprocessor directives.
 
 <img src="preprocessor_directives.png" alt="">
+
+#### I/O Streams
+
+`std::cout` print
+`std::endl`  end line
+`\n` new line
+`\r` carriage return
+`\t` tab
+`\\` the backslash character
+`\"` quotation mark
+
+#### Namespaces
+
+
+Namespaces address the problem of naming conflicts between different pieces of code. For example, you might be writing some code that has a function called foo(). One day, you decide to start using a third- party library, which also has a foo() function. The compiler has no way of knowing which version of foo() you are referring to within your code. You can’t change the library’s function name, and it would be a big pain to change your own.
+Namespaces come to the rescue in such scenarios because you can define the context in which names are defined. To place code in a namespace, simply enclose it within a namespace block:
+
