@@ -49,4 +49,4 @@ Variables can be converted to other types by casting them. For example, an int c
 
 The table below shows the most common operators used in C++ and sample code that makes use of them.
 
-<img src="images/operators" alt="">
+<img src="images/operators.png" alt="">
