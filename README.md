@@ -12,17 +12,17 @@ The iostream header declares the input and output mechanisms provided by C++.
 
 The table below shows some of the most common preprocessor directives.
 
-<img src="preprocessor_directives.png" alt="">
+<img src="images/preprocessor_directives.png" alt="">
 
 #### I/O Streams
 
-`std::cout` print
-`std::endl`  end line
-`\n` new line
-`\r` carriage return
-`\t` tab
-`\\` the backslash character
-`\"` quotation mark
+`std::cout print`
+`std::endl  end line`
+`\n new line`
+`\r carriage return`
+`\t tab`
+`\\ the backslash character`
+`\" quotation mark`
 
 #### Namespaces
 
@@ -34,7 +34,7 @@ Namespaces come to the rescue in such scenarios because you can define the conte
 
 The table that follows shows the most common variable types used in C++.
 
-<img src="variables/variable_types" alt="">
+<img src="images/variable_types.png" alt="">
 
 > C++ does not provide a basic string type. However, a standard implementation of a string is provided as part of the standard library as described later in this chapter and in Chapter 13.
 
