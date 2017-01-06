@@ -58,13 +58,14 @@ The table below shows the most common operators used in C++ and sample code that
 
 #### Functions
 
-...For programs of any significant size, placing all the code inside of main() is unmanageable. To make programs easy to understand, you need to break up, or decompose, code into concise functions.
-...In C++, you first declare a function to make it available for other code to use. If the function is used inside a particular file of code, you generally declare and define the function in the source file. If the function is for use by other modules or files, you generally put the declaration in a header file and the definition in a source file.
+For programs of any significant size, placing all the code inside of main() is unmanageable. To make programs easy to understand, you need to break up, or decompose, code into concise functions.
+
+In C++, you first declare a function to make it available for other code to use. If the function is used inside a particular file of code, you generally declare and define the function in the source file. If the function is for use by other modules or files, you generally put the declaration in a header file and the definition in a source file.
 
 > Function declarations are often called “function prototypes” or “signatures” to emphasize that they represent how the function can be accessed, but not the code behind it.
 
 > In C++, unlike C, a function that takes no parameters just has an empty parameter list. It is not necessary to use “void” to indicate that no parameters are taken. However, you should still use “void” to indicate when no value is returned.
 
-...A function declaration is shown below. This example has a return type of void, indicating that the func- tion does not provide a result to the caller. The caller must provide two arguments for the function to work with — an integer and a character.
+A function declaration is shown below. This example has a return type of void, indicating that the func- tion does not provide a result to the caller. The caller must provide two arguments for the function to work with — an integer and a character.
 
 `void myFunction(int i, char c);`
