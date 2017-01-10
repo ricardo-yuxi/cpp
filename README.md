@@ -1,5 +1,7 @@
 ## C++ Research
 
+[CppReference](http://en.cppreference.com/)
+
 #### Preprocessor Directives
 
 Building a C++ program is a three-step process.
@@ -41,7 +43,7 @@ The table that follows shows the most common variable types used in C++.
 
 <img src="images/variable_types.png" alt="">
 
-> C++ does not provide a basic string type. However, a standard implementation of a string is provided as part of the standard library as described later in this chapter and in Chapter 13.
+> C++ does not provide a basic string type. However, a standard implementation of a string is provided as part of the standard library as described later.
 
 Variables can be converted to other types by casting them. For example, an int can be cast to a bool. C++ provides three ways of explicitly changing the type of a variable. The first method is a holdover from C, but is still the most commonly used. The second method seems more natural at first but is rarely seen. The third method is the most verbose, but often considered the cleanest.
 
@@ -69,3 +71,30 @@ In C++, you first declare a function to make it available for other code to use.
 A function declaration is shown below. This example has a return type of void, indicating that the func- tion does not provide a result to the caller. The caller must provide two arguments for the function to work with — an integer and a character.
 
 `void myFunction(int i, char c);`
+
+## Pointers and Dynamic Memory
+
+Dynamic memory allows you to build programs with data that is not of fixed size at compile time. Most nontrivial programs make use of dynamic memory in some form.
+
+### The Stack and the Heap
+
+Memory in your C++ application is divided into two parts — the stack and the heap. One way to visual- ize the stack is as a deck of cards. The current top card represents the current scope of the program, usu- ally the function that is currently being executed. All variables declared inside the current function will take up memory in the top stack frame, the top card of the deck. If the current function, which we’ll call foo() calls another function bar(), a new card is put on the deck so that bar() has its own stack frame to work with. Any parameters passed from foo() to bar() are copied from the foo() stack frame into the bar() stack frame. Figure 1-2 shows what the stack might look like during the execution of a hypothetical function foo() that has declared two integer values.
+
+<img src="images/stack&heap.png" alt="">
+
+Stack frames are nice because they provide an isolated memory workspace for each function. If a vari- able is declared inside the foo() stack frame, calling the bar() function won’t change it unless you specifically tell it to. Also, when the foo() function is done running, the stack frame goes away, and all of the variables declared within the function no longer take up memory.
+
+The heap is an area of memory that is completely independent of the current function or stack frame. You can put variables on the heap if you want them to exist even when the function in which they were declared has completed. The heap is less structured than the stack. You can think of it as just a pile of bits. Your program can add new bits to the pile at any time or modify bits that are already in the pile.
+
+### Dynamically Allocated Arrays
+
+To allocate an array dynamically, you first need to declare a pointer:
+
+`int* myVariableSizedArray;`
+
+The * after the int type indicates that the variable you are declaring refers to some integer memory in the heap. Think of the pointer as an arrow that points at the dynamically allocated heap memory. It does not yet point to anything specific because you haven’t assigned it to anything; it is an uninitialized variable.
+
+To initialize the pointer to new heap memory, you use the new command:
+
+`myVariableSizedArray = new int[arraySize];`
+
